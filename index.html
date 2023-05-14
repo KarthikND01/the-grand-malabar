@@ -8,9 +8,6 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,9 +54,9 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="#about-section" class="nav-item nav-link">About</a>
+                        <a href="#menu-section" class="nav-item nav-link">Menu</a>
+                        <a href="#connect-section" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -77,7 +74,7 @@
         <!-- Navbar & Hero End -->
 
         <!-- About Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5" id="about-section">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
@@ -99,8 +96,8 @@
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Grand Malabar</h1>
-                        <p class="mb-4">We serves up standard Indian fare from both North and South India. Tandoori cuisine and seafood is served right alongside South Indian delicasies as well as fast food.</p>
-                        <p class="mb-4">We also arrange and decorate the dining tables and buffet counters in a very attractive manner.</p>
+                        <p class="mb-4">Malabar is a historical and geographical region located on the southwestern coast of India, specifically in the state of Kerala. We bring the vibrant flavors and rich culinary heritage of Malabar to your plate. We invite you on a culinary adventure that showcases the unique blend of spices, aromatic herbs, and fresh ingredients that define the Malabar region.</p>
+                        <p class="mb-4">Experience our warm ambiance and let our attentive staff create a memorable dining journey. Whether you're a seasoned food lover or new to Malabari cuisine, we'll transport your taste buds to the enchanting flavors of Malabar with every bite.</p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
@@ -129,11 +126,11 @@
 
 
         <!-- Menu Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5" id="menu-section">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <h1 class="mb-5">Most Popular Items</h1>
+                    <h1 class="mb-4">Our Culinary Delights</h1>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -163,11 +160,17 @@
                         </li>
                     </ul>
                     <div class="tab-content">
+                        <div id="imagePopup" class="image-popup">
+                            <span class="close-button" onclick="closeImagePopup()">&times;</span>
+                            <img id="popupImage" src="" alt="Popup Image">
+                        </div>
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/puyyapla-choru.jpeg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/puyyapla-choru.jpeg')">
+                                            <img src="img/puyyapla-choru.jpeg" alt="" style="width: 80px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Puthiyapila Choru</span>
@@ -179,7 +182,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/beef-ularthu.jpeg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/beef-ularthiyathu.png')">
+                                            <img src="img/beef-ularthiyathu.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Beef Ularthiyathu(Fry)</span>
@@ -191,7 +196,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
+                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Malabar Chicken Dum Biriyani</span>
@@ -203,7 +210,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
+                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Kozhi (Chicken) Porichathu</span>
@@ -215,7 +224,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
+                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Ghee Rice</span>
@@ -227,7 +238,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
+                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Kozhi Varutharacha Curry</span>
@@ -243,7 +256,9 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/beef-ularthiyathu.png')">
+                                            <img src="img/beef-ularthiyathu.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Beef Ularthiyathu(Fry)</span>
@@ -255,7 +270,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/alappy-fish-curry.png')">
+                                            <img src="img/alappy-fish-curry.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Alleppey Chicken Curry</span>
@@ -267,7 +284,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/fish-nirvana.jpeg')">
+                                            <img src="img/fish-nirvana.jpeg" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Fish Nirvana</span>
@@ -279,7 +298,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
+                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Kozhi Varutharacha Curry</span>
@@ -291,7 +312,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
+                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Kozhi (Chicken) Porichathu</span>
@@ -303,7 +326,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
+                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Naadan Beef Curry</span>
@@ -315,7 +340,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
+                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Kadai Chicken</span>
@@ -327,7 +354,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
+                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Butter Chicken</span>
@@ -343,7 +372,9 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
+                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Gulab Jamun & Ice Cream</span>
@@ -355,7 +386,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
+                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Pal Payasam (Rice Pudding)</span>
@@ -367,7 +400,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
+                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Mango Lassi</span>
@@ -379,7 +414,9 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
+                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
+                                        </div>
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Sulaimani Chai</span>
@@ -480,28 +517,30 @@
         
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s" id="connect-section">
             <div class="container py-3">
                 <div class="row g-5">
                     <div class="col">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>347 Erb St. W #4, Waterloo, ON N2L 1W4</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+15192659598</p>
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal  pt-3">Follow us on social media</h4>
-                        <div class="d-flex pt-3">
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/thegrandmalabar/"><i class="fab fa-instagram"></i></a>
+                        <p class="mb-2" ></i><a href="tel:+15192659598" style="color: #F1F8FF;"><i class="fa fa-phone-alt me-3"></i>+1-519-265-9598</a></p>
+                    </div>
+                    <div class="col">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Follow us</h4>
+                        <div class="list-container">
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/thegrandmalabar/" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - </h5><p>Closed</p>
-                        <h5 class="text-light fw-normal">Tuesday - Wednesday - Thursday</h5><p>4:30 - 10:30 PM</p>
-                        <h5 class="text-light fw-normal">Friday - </h5><p>4:30 - 11:00 PM</p>
-                        <h5 class="text-light fw-normal">Saturday - </h5><p>3:00 - 11:00  PM</p>
-                        <h5 class="text-light fw-normal">Sunday - </h5><p>3:00 - 10:30 PM</p>
+                        <h5 class="text-light fw-normal">Mon : <i style="font-size: 14px;">Closed</i></h5>
+                        <h5 class="text-light fw-normal">Tue - Wed - Thu : <i style="font-size: 14px;">4:30 - 10:30 PM</i></h5>
+                        <h5 class="text-light fw-normal">Fri : <i style="font-size: 14px;">4:30 - 11:00 PM</i></h5>
+                        <h5 class="text-light fw-normal">Sat : <i style="font-size: 14px;">3:00 - 11:00  PM</i></h5>
+                        <h5 class="text-light fw-normal">Sun : <i style="font-size: 14px;">3:00 - 10:30 PM</i></h5>
                     </div>
                 </div>
             </div>
@@ -518,7 +557,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+         <!-- Footer End -->
 
 
         <!-- Back to Top -->
@@ -539,6 +578,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/behaviour.js"></script>
 </body>
 
 </html>
