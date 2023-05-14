@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>The Grand Malabar Indian Cuisine</title>
+    <title>The Grand Malabar</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -51,10 +51,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="#about-section" class="nav-item nav-link">About</a>
-                        <a href="#menu-section" class="nav-item nav-link">Menu</a>
-                        <a href="#connect-section" class="nav-item nav-link">Contact</a>
+                        <a id="homeNav" onClick="setActive('homeNav')" href="index.html" class="nav-item nav-link">Home</a>
+                        <a id="aboutNav" onClick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
+                        <a id="menuNav" onClick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
+                        <a id="contactNav"onClick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -540,11 +540,11 @@
                     </div>
                     <div class="col">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Mon : <i style="font-size: 14px;">Closed</i></h5>
-                        <h5 class="text-light fw-normal">Tue - Wed - Thu : <i style="font-size: 14px;">4:30 - 10:30 PM</i></h5>
-                        <h5 class="text-light fw-normal">Fri : <i style="font-size: 14px;">4:30 - 11:00 PM</i></h5>
-                        <h5 class="text-light fw-normal">Sat : <i style="font-size: 14px;">3:00 - 11:00  PM</i></h5>
-                        <h5 class="text-light fw-normal">Sun : <i style="font-size: 14px;">3:00 - 10:30 PM</i></h5>
+                        <h6 class="text-light fw-normal">MON : <i class="text-primary" style="font-size: 12px;">Closed</i></h6>
+                        <h6 class="text-light fw-normal">TUE - WED - THU : <i class="text-primary" style="font-size: 12px;">4:30 - 10:30 PM</i></h6>
+                        <h6 class="text-light fw-normal">FRI : <i class="text-primary" style="font-size: 12px;">4:30 - 11:00 PM</i></h6>
+                        <h6 class="text-light fw-normal">SAT : <i class="text-primary" style="font-size: 12px;">3:00 - 11:00  PM</i></h6>
+                        <h6 class="text-light fw-normal">SUN : <i class="text-primary" style="font-size: 12px;">3:00 - 10:30 PM</i></h6>
                     </div>
                 </div>
             </div>
