@@ -534,10 +534,8 @@
     text-decoration: none;
   }
   
-
-  
   .responsive-heading {
-    font-size: 20px; 
+    font-size: 18px; 
   }
 
   /* Tablet styles */
@@ -552,4 +550,28 @@
     .responsive-heading {
       font-size: 48px;
     }
+  }
+
+  .opening-time {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .opening-time .day {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .opening-time .time {
+    display: block;
+  }
+  
+  .opening-time:before {
+    content: "Opening Hours";
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
