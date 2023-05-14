@@ -29,7 +29,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="initiateUI()">
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -41,12 +41,10 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-sm-5 px-lg-5 py-3 py-sm-5 py-lg-0">
+        <div class="container-xxl position-relative p-0 bg-dark ">
+            <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0" style="font-size: 3vw;"><i class="fa fa-utensils me-3"></i>The Grand Malabar Indian Cuisine</h1>
-                    <!-- <h1 style="font-size: 8vw;">The Grand Malabar Indian Cuisine</h1> -->
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                    <h1 id="responsiveHeading" class="text-primary m-3 responsive-heading">The Grand Malabar Indian Cuisine</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -60,16 +58,23 @@
                     </div>
                 </div>
             </nav>
-            
-            <div class="container-xxl py-4 bg-dark hero-header mb-5">
-                <div class="container my-5 py-5">
-                    <div class="row align-items-left g-5">
-                        <div class="col-lg-8 text-left">
-                            <h4 class="text-white animated slideInLeft">Indulge in the rich flavors of Malabar cuisine at our restaurant - where every bite takes you on a journey to God's Own Country!</h4>
+
+            <div class="container-xxl py-3 py-lg-5 bg-dark hero-header mb-3 mb-lg-5">
+                <div class="container my-3 my-lg-5 py-3 py-lg-5">
+                    <div class="row align-items-center g-3 g-lg-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white animated slideInLeft">Welcome to <br>Malabar's Flavorful Delights!</h1>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Savor the exquisite tastes of Malabar cuisine at our restaurant, where every bite takes you on a journey to God's Own Country!</p>
+                            <a href="#menu-section" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Culinary Selections</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                            <img class="img-fluid" src="" alt="">
                         </div>
                     </div>
                 </div>
             </div>
+
+            
         </div>
         <!-- Navbar & Hero End -->
 
@@ -130,7 +135,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <h1 class="mb-4">Our Culinary Delights</h1>
+                    <h1 class="mb-4">Our Culinary Selections</h1>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -467,9 +472,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>It was a great experience in The Grand Malabar Indian Cuisine restaurant. Located in a quiet place in Waterloo , this evening restaurant serves some authentic Kerala foods at a reasonable price.The Kalapam and beef curry was yummy and is one of the best recipes in entire Ontario.The team were very friendly and were very much keen in customer satisfaction. A great restaurant which can definitely checkout atleast once for the great ambience and taste</p>
                         <div class="d-flex align-items-center">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Anil Alias Paul</h5>
-                            </div>
+                            <h5 class="mb-1">Anil Alias Paul</h5>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
@@ -489,6 +492,7 @@
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>I recently dined at an the grand malabar and it was an absolute delight. The staff was extremely friendly and attentive, and the ambiance was cozy and inviting. The food was absolutely delicious, with a perfect balance of spices and flavors that left me wanting more. Overall, I highly recommend this restaurant to anyone looking for a fantastic Indian dining experience</p>
+                        <div class="d-flex align-items-center">
                             <h5 class="mb-1">Bhavaani Amjith</h5>
                         </div>
                     </div>

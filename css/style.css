@@ -155,7 +155,7 @@
     background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/gmHome.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 80%;
 }
 
 .hero-header img {
@@ -534,3 +534,20 @@
     text-decoration: none;
   }
   
+  .responsive-heading {
+    font-size: 20px; 
+  }
+
+  /* Tablet styles */
+  @media (min-width: 810px) {
+    .responsive-heading {
+      font-size: 36px;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1230px) {
+    .responsive-heading {
+      font-size: 48px;
+    }
+  }
