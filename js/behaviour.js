@@ -50,3 +50,18 @@ function setActive(navigation) {
     }
   });
 }
+
+function sendEmail() {
+  var customerName = document.getElementById("customerName");
+  var customerEmail = document.getElementById("customerEmail");
+  var emailSubject = document.getElementById("emailSubject");
+  var emailBody = document.getElementById("emailBody");
+
+  Email.send({
+    SecureToken: "2b8af89a-dc51-4b67-a282-82f1a3f080ce",
+    To: "allu381993@gmail.com",
+    From: customerEmail,
+    Subject: emailSubject,
+    Body: emailBody,
+  }).then((message) => console.log(message));
+}
