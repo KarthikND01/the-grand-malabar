@@ -51,17 +51,25 @@ function setActive(navigation) {
   });
 }
 
-function sendEmail() {
+function sendEmail(event) {
+  event.preventDefault();
   var customerName = document.getElementById("customerName").value;
   var customerEmail = document.getElementById("customerEmail").value;
   var emailSubject = document.getElementById("emailSubject").value;
-  var emailBody = document.getElementById("emailBody").value;
-
+  var message = document.getElementById("emailBody").value;
+  var emailBody =
+    "Customer Name : " +
+    customerName +
+    "<br/>" +
+    "Customer Email Address : " +
+    customerEmail +
+    "<br/><br/> Message from Customer : <br/>" +
+    message;
   Email.send({
-    SecureToken: "2b8af89a-dc51-4b67-a282-82f1a3f080ce",
-    To: "allu381993@gmail.com",
-    From: customerEmail,
+    SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
+    To: "yourbrocoder@gmail.com",
+    From: "allu381993@gmail.com",
     Subject: emailSubject,
     Body: emailBody,
-  }).then((message) => console.log(message));
+  }).then((message) => alert(message));
 }

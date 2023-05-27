@@ -535,7 +535,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form onsubmit="sendEmail()">
+                            <form onsubmit="sendEmail(event); reset(); return false;">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
@@ -636,7 +636,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/behaviour.js"></script>
-    <script src="js/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
