@@ -52,10 +52,10 @@ function setActive(navigation) {
 }
 
 function sendEmail() {
-  var customerName = document.getElementById("customerName");
-  var customerEmail = document.getElementById("customerEmail");
-  var emailSubject = document.getElementById("emailSubject");
-  var emailBody = document.getElementById("emailBody");
+  var customerName = document.getElementById("customerName").value;
+  var customerEmail = document.getElementById("customerEmail").value;
+  var emailSubject = document.getElementById("emailSubject").value;
+  var emailBody = document.getElementById("emailBody").value;
 
   Email.send({
     SecureToken: "2b8af89a-dc51-4b67-a282-82f1a3f080ce",
