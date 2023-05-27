@@ -165,10 +165,12 @@
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div id="imagePopup" class="image-popup">
-                            <span class="close-button" onclick="closeImagePopup()">&times;</span>
-                            <img id="popupImage" src="" alt="Popup Image">
-                        </div>
+                        <div id="imagePopup">
+                            <div id="imageContainer">
+                                <span class="close-button" onclick="closeImagePopup()">&times;</span>
+                                <img id="popupImage" src="" alt="Popup Image">
+                            </div>
+                          </div>
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-lg-6">
@@ -500,46 +502,22 @@
             </div>
         </div>
         <!-- Testimonial End -->
-
-        <!-- Location Start -->
-        <!-- <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Our Location</h5>
-                </div>
-                <div class="row align-items-center pt-4">
-                    <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.283117407272!2d-80.54844322402835!3d43.454686171112286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf751ebfddfc9%3A0xf1704b16cdf57672!2sThe%20Grand%20Malabar%20Indian%20Cuisine!5e0!3m2!1sen!2sca!4v1683850309496!5m2!1sen!2sca"
-                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
-                    </div> 
-                </div>
-            </div>
-        </div> -->
-        <!-- Location End -->
         
         <!-- Contact Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5" id="connect-section">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
                     <h1 class="mb-5">Contact For Any Query</h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.283117407272!2d-80.54844322402835!3d43.454686171112286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf751ebfddfc9%3A0xf1704b16cdf57672!2sThe%20Grand%20Malabar%20Indian%20Cuisine!5e0!3m2!1sen!2sca!4v1683850309496!5m2!1sen!2sca"
-                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form onsubmit="sendEmail(event); reset(); return false;">
+                            <form onsubmit="sendEmail(event); reset();">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="customerName" placeholder="Your Name">
+                                            <input type="text" class="form-control" id="customerName" maxlength="50" placeholder="Your Name">
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
@@ -551,13 +529,13 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="emailSubject" placeholder="Subject">
+                                            <input type="text" class="form-control" id="emailSubject" maxlength="80" placeholder="Subject">
                                             <label for="subject">Subject</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="emailBody" style="height: 150px"></textarea>
+                                            <textarea class="form-control" placeholder="Leave a message here" maxlength="1000" id="emailBody" style="height: 150px"></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
@@ -568,13 +546,19 @@
                             </form>
                         </div>
                     </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                        <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.283117407272!2d-80.54844322402835!3d43.454686171112286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf751ebfddfc9%3A0xf1704b16cdf57672!2sThe%20Grand%20Malabar%20Indian%20Cuisine!5e0!3m2!1sen!2sca!4v1683850309496!5m2!1sen!2sca"
+                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Contact End -->
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s" id="connect-section">
+        <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-3">
                 <div class="row g-5">
                     <div class="col">

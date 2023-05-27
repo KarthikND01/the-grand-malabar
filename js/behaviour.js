@@ -2,7 +2,6 @@ function previewImage(imageUrl) {
   var popup = document.getElementById("imagePopup");
   var popupImage = document.getElementById("popupImage");
   popupImage.src = imageUrl;
-  console.log(imageUrl);
   popup.style.display = "block";
 }
 
@@ -71,5 +70,7 @@ function sendEmail(event) {
     From: "allu381993@gmail.com",
     Subject: emailSubject,
     Body: emailBody,
-  }).then((message) => alert(message));
+  }).then((message) =>
+    alert("Message sent. Thanks for sharing your feedback!")
+  );
 }
