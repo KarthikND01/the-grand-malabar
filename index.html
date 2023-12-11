@@ -44,17 +44,19 @@
         <div class="container-xxl position-relative p-0 bg-dark ">
             <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 id="responsiveHeading" class="text-primary m-3 responsive-heading">The Grand Malabar Indian Cuisine</h1>
+                    <h1 id="responsiveHeading" class="text-primary m-3 responsive-heading">
+                        <img src='img/logo/yellow-logo.PNG' width='60' height='60'>The Grand Malabar</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a id="homeNav" onClick="setActive('homeNav')" href="index.html" class="nav-item nav-link">Home</a>
-                        <a id="aboutNav" onClick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
-                        <a id="menuNav" onClick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
-                        <a id="contactNav"onClick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
+                        <a id="homeNav" onclick="setActive('homeNav')" href="index.html" class="nav-item nav-link">Home</a>
+                        <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
+                        <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
+                        <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
+                        <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item nav-link">News</a>
                     </div>
                 </div>
             </nav>
@@ -65,7 +67,7 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="text-white animated slideInLeft">Welcome to <br>Malabar's Flavorful Delights!</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2">Savor the exquisite tastes of Malabar cuisine at our restaurant, where every bite takes you on a journey to God's Own Country!</p>
-                            <a href="#menu-section" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Culinary Selections</a>
+                            <a onclick="openOnlineOrderLink()" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Order Online</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="" alt="">
@@ -173,266 +175,17 @@
                           </div>
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/puyyapla-choru.jpeg')">
-                                            <img src="img/puyyapla-choru.jpeg" alt="" style="width: 80px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Puthiyapila Choru</span>
-                                                <span class="text-primary">$18.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Ghee rice combo with chicken and beef sides and a treat served to sons-in-law</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/beef-ularthiyathu.png')">
-                                            <img src="img/beef-ularthiyathu.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Beef Ularthiyathu(Fry)</span>
-                                                <span class="text-primary">$17.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Beef chunks, seasoned with keralan spice, and sauteed to perfection.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
-                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Malabar Chicken Dum Biriyani</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken- aromatic short-grain kaima rice, layered with herbs comes with pickle, and raita.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
-                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Kozhi (Chicken) Porichathu</span>
-                                                <span class="text-primary">$14.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Malabar masala spiced and deep fried.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
-                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Ghee Rice</span>
-                                                <span class="text-primary">$10.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Aromatic ghee flavoured short grain rice, served with yoghurt raita, and pickle</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/chicken-biriyani.jpeg')">
-                                            <img src="img/chicken-biriyani.jpeg" alt="" style="width: 80px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Kozhi Varutharacha Curry</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken in a roasted coconut masala</small>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="row" id="popularMenuDiv"></div>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/beef-ularthiyathu.png')">
-                                            <img src="img/beef-ularthiyathu.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Beef Ularthiyathu(Fry)</span>
-                                                <span class="text-primary">$17.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Beef chunks, seasoned with keralan spice, and sauteed to perfection.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/alappy-fish-curry.png')">
-                                            <img src="img/alappy-fish-curry.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Alleppey Chicken Curry</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken chunks and in coconut milk gravy</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/fish-nirvana.jpeg')">
-                                            <img src="img/fish-nirvana.jpeg" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Fish Nirvana</span>
-                                                <span class="text-primary">$20.99</span>
-                                            </h5>
-                                            <small class="fst-italic">A syrian catholic specialty and fried fish in a rich-coconut milk gravy</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
-                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Kozhi Varutharacha Curry</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken in a roasted coconut masala</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
-                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Kozhi (Chicken) Porichathu</span>
-                                                <span class="text-primary">$14.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Malabar masala spiced and deep fried</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
-                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Naadan Beef Curry</span>
-                                                <span class="text-primary">$16.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Beef, in chef's special spice blend, sauteed with onion, ginger, and garlic</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
-                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Kadai Chicken</span>
-                                                <span class="text-primary">$16.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken in spicy tomato gravy, seasoned with fresh ground spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/kadai-chicken.png')">
-                                            <img src="img/kadai-chicken.png" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Butter Chicken</span>
-                                                <span class="text-primary">$16.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken cubes in creamy tomato gravy</small>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="row" id="specialMenuDiv"></div>
                             </div>
                         </div>
                         <div id="tab-3" class="tab-pane fade show p-0">
                             <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
-                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Gulab Jamun & Ice Cream</span>
-                                                <span class="text-primary">$8.49</span>
-                                            </h5>
-                                            <small class="fst-italic">Warm dumplings topped with ice cream</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
-                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Pal Payasam (Rice Pudding)</span>
-                                                <span class="text-primary">$6.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Delicately sweetened rice & milk dessert</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
-                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Mango Lassi</span>
-                                                <span class="text-primary">$6.99</span>
-                                            </h5>
-                                            <small class="fst-italic">A delicious creamy drink with mango, yogurt, milk, a little sugar</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="image-container" onclick="previewImage('img/special-juice.jpeg')">
-                                            <img src="img/special-juice.jpeg" alt="" style="width: 80px; height: 55px;">
-                                        </div>
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Sulaimani Chai</span>
-                                                <span class="text-primary">$2.49</span>
-                                            </h5>
-                                            <small class="fst-italic">Warm sweet black tea, with lemon</small>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="row" id="lovelyMenuDiv"></div>
                             </div>
                         </div>
                     </div>
@@ -508,7 +261,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
-                    <h1 class="mb-5">Contact For Any Query</h1>
+                    <h1 class="mb-5">Tell Us What You Think!</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6">
