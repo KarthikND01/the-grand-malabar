@@ -101,128 +101,130 @@ function openCompleteMenuOptions() {
 
 var popularFoodMenu = [
   {
-    imageSrc: "img/puyyapla-choru.jpeg",
+    imageSrc: "img/menu/Puthiyapila_Choru.jpeg",
     title: "Puthiyapila Choru",
     price: "$18.99",
     description:
-      "Ghee rice combo with chicken and beef sides and a treat served to sons-in-law",
+      "Ghee rice combo with coconut dal, chicken fry and chicken / beef curry, a treat served to sons-in-law",
   },
   {
-    imageSrc: "img/beef-ularthiyathu.png",
-    title: "Beef Ularthiyathu(Fry)",
+    imageSrc: "img/menu/Beef_Ularthiyathu.jpeg",
+    title: "Beef Ularthiyathu",
     price: "$17.99",
     description:
-      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection.",
+      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection",
   },
   {
-    imageSrc: "img/chicken-biriyani.jpeg",
+    imageSrc: "img/menu/Malabar_Chicken_Dum_Biryani.jpeg",
     title: "Malabar Chicken Dum Biriyani",
     price: "$15.99",
     description:
-      "Chicken - aromatic short-grain kaima rice, layered with herbs comes with pickle, and raita.",
+      "Chicken - aromatic short-grain kaima rice, layered with herbs comes with pickle, and raita",
   },
   {
-    imageSrc: "img/chicken-biriyani.jpeg",
-    title: "Kozhi (Chicken) Porichathu",
+    imageSrc: "img/menu/Chemmeen_Shrimp_Fry.jpeg",
+    title: "Chemmeen (shrimp) Fry",
     price: "$14.99",
-    description: "Malabar masala spiced and deep-fried.",
+    description: "Shrimp spiced and fried, Kerala-style",
   },
   {
-    imageSrc: "img/chicken-biriyani.jpeg",
-    title: "Ghee Rice",
-    price: "$10.99",
+    imageSrc: "img/menu/Fish_Nirvana.jpeg",
+    title: "Fish Nirvana",
+    price: "$19.99",
     description:
-      "Aromatic ghee-flavored short-grain rice, served with yogurt raita, and pickle",
+      "A Syrian Catholic specialty, Fried fish, pan-baked in a rich-coconut milk gravy",
   },
   {
-    imageSrc: "img/chicken-biriyani.jpeg",
-    title: "Kozhi Varutharacha Curry",
+    imageSrc: "img/menu/Alleppey_Chicken_Curry.jpeg",
+    title: "Alleppey Chicken Curry",
     price: "$15.99",
-    description: "Chicken in a roasted coconut masala",
+    description: "Chicken, in coconut milk gravy, warm with spices",
   },
   // Add more items as needed
 ];
 
 var specialFoodMenu = [
   {
-    imageSrc: "img/beef-ularthiyathu.png",
-    title: "Beef Ularthiyathu(Fry)",
-    price: "$17.99",
-    description:
-      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection.",
-  },
-  {
-    imageSrc: "img/alappy-fish-curry.png",
-    title: "Alleppey Chicken Curry",
-    price: "$15.99",
-    description: "Chicken chunks and in coconut milk gravy",
-  },
-  {
-    imageSrc: "img/fish-nirvana.jpeg",
-    title: "Fish Nirvana",
-    price: "$20.99",
-    description:
-      "A Syrian catholic specialty and fried fish in a rich-coconut milk gravy",
-  },
-  {
-    imageSrc: "img/kadai-chicken.png",
-    title: "Kozhi Varutharacha Curry",
-    price: "$15.99",
-    description: "Chicken in a roasted coconut masala",
-  },
-  {
-    imageSrc: "img/kadai-chicken.png",
-    title: "Kozhi (Chicken) Porichathu",
-    price: "$14.99",
-    description: "Malabar masala spiced and deep fried",
-  },
-  {
-    imageSrc: "img/kadai-chicken.png",
-    title: "Naadan Beef Curry",
-    price: "$16.99",
-    description:
-      "Beef, in chef's special spice blend, sauteed with onion, ginger, and garlic",
-  },
-  {
-    imageSrc: "img/kadai-chicken.png",
+    imageSrc: "img/menu/Kadai_Chicken.jpeg",
     title: "Kadai Chicken",
-    price: "$16.99",
+    price: "$15.99",
     description:
       "Chicken in spicy tomato gravy, seasoned with fresh ground spices",
   },
   {
-    imageSrc: "img/kadai-chicken.png",
-    title: "Butter Chicken",
-    price: "$16.99",
-    description: "Chicken cubes in creamy tomato gravy",
+    imageSrc: "img/menu/Goan_Chicken_Soup.jpeg",
+    title: "Goan Chicken Soup",
+    price: "$6.99",
+    description: "Rich chicken soup with coconut milk",
+  },
+  {
+    imageSrc: "img/menu/Kerala_Parotta.jpeg",
+    title: "Kerala Parotta",
+    price: "$3.49",
+    description:
+      "Layered flaky flatbread, a perfect accompaniment to our mains",
+  },
+  {
+    imageSrc: "img/menu/Appam.jpeg",
+    title: "Kallappam",
+    price: "$1.99",
+    description: "Coconut-flavoured rice pancakes",
+  },
+  {
+    imageSrc: "img/menu/Beef_Ularthiyathu.jpeg",
+    title: "Beef Ularthiyathu",
+    price: "$17.99",
+    description:
+      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection",
+  },
+  {
+    imageSrc: "img/menu/Fish_Nirvana.jpeg",
+    title: "Fish Nirvana",
+    price: "$19.99",
+    description:
+      "A Syrian Catholic specialty, Fried fish, pan-baked in a rich-coconut milk gravy",
+  },
+  {
+    imageSrc: "img/menu/Fish_Cutlets_2pc.jpeg",
+    title: "Fish Cutlets",
+    price: "$7.99",
+    description:
+      "Flaked, spiced fish, blended with spiced potatoes & crumb fried, served with Sarlas",
+  },
+  {
+    imageSrc: "img/menu/Alleppey_Chicken_Curry.jpeg",
+    title: "Alleppey Chicken Curry",
+    price: "$15.99",
+    description: "Chicken, in coconut milk gravy, warm with spices",
   },
 ];
 
 var lovelyFoodMenu = [
   {
-    imageSrc: "img/special-juice.jpeg",
-    title: "Gulab Jamun & Ice Cream",
-    price: "$8.49",
-    description: "Warm dumplings topped with ice cream",
+    imageSrc: "img/menu/TGMs_Falooda.jpeg",
+    title: "TGM’s Falooda",
+    price: "$10.99",
+    description: "Ice cream topped trifle of fruit, vermicelli",
   },
   {
-    imageSrc: "img/special-juice.jpeg",
-    title: "Pal Payasam (Rice Pudding)",
-    price: "$6.99",
-    description: "Delicately sweetened rice & milk dessert",
+    imageSrc: "img/menu/Fruit_Salad_With_Ice_Cream.jpeg",
+    title: "Fruit Salad with Ice cream",
+    price: "$7.99",
+    description: "Fruit medley with vanilla ice cream",
   },
   {
-    imageSrc: "img/special-juice.jpeg",
+    imageSrc: "img/menu/Mango_Lassi.jpeg",
     title: "Mango Lassi",
-    price: "$6.99",
+    price: "$6.49",
     description:
       "A delicious creamy drink with mango, yogurt, milk, a little sugar",
   },
   {
-    imageSrc: "img/special-juice.jpeg",
-    title: "Sulaimani Chai",
-    price: "$2.49",
-    description: "Warm sweet black tea, with lemon",
+    imageSrc: "img/menu/Special_juice.jpeg",
+    title: "Pineapple Mojito",
+    price: "$5.49",
+    description:
+      "A tropical delight combines fresh pineapple, mint and lime for a refreshingly sweet and zesty cocktail experience.",
   },
 ];
 
