@@ -553,10 +553,25 @@
     font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
   }
 
+  @media (min-width: 200px) {
+    .responsive-heading {
+      font-size: 15px;
+      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    }
+
+    .navbar-toggler {
+        padding:0.05rem 0.20rem;
+    }
+  }
+
   @media (min-width: 340px) {
     .responsive-heading {
-      font-size: 16px;
+      font-size: 15px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    }
+
+    .navbar-toggler {
+        padding:0.05rem 0.20rem;
     }
   }
 
@@ -565,12 +580,20 @@
       font-size: 18px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
     }
+
+    .navbar-toggler {
+        padding:0.10rem 0.25rem;
+    }
   }
 
   @media (min-width: 374px) {
     .responsive-heading {
       font-size: 20px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    }
+
+    .navbar-toggler {
+        padding:0.10rem 0.25rem;
     }
   }
 
@@ -579,12 +602,20 @@
       font-size: 22px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
     }
+
+    .navbar-toggler {
+        padding:0.20rem 0.60rem;
+    }
   }
 
   @media (min-width: 410px) {
     .responsive-heading {
       font-size: 24px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
     }
   }
 
@@ -593,12 +624,20 @@
       font-size: 26px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
     }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
+    }
   }
 
   @media (min-width: 444px) {
     .responsive-heading {
       font-size: 28px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
     }
   }
 
@@ -607,12 +646,20 @@
       font-size: 30px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
     }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
+    }
   }
 
   @media (min-width: 498px) {
     .responsive-heading {
       font-size: 34px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
     }
   }
 
@@ -621,10 +668,18 @@
       font-size: 40px;
       font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
     }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
+    }
   }
   
   @media (min-width: 1230px) {
     .responsive-heading {
       font-size: 50px;
+    }
+
+    .navbar-toggler {
+        padding:0.25rem 0.75rem;
     }
   }
