@@ -66,7 +66,8 @@ function sendEmail(event) {
     "<b>Customer Email Address : </b>" +
     customerEmail +
     "<br/><br/> <b>Message from Customer : </b><br/>" +
-    message;
+    message +
+    "</b><br/>";
   Email.send({
     SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
     To: "yourbrocoder@gmail.com",
