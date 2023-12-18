@@ -877,3 +877,11 @@
 .paragraph-text {
     text-align: justify;
 }
+
+.text-gm-white {
+    color:#dbd3d3 !important
+}
+
+.text-gm-white-50 {
+    color:rgba(219, 211, 211,0.5) !important
+}
