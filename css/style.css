@@ -595,7 +595,7 @@
 
   @media (min-width: 365px) {
     .responsive-heading {
-      font-size: 24px;
+      font-size: 22px;
       font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
@@ -604,18 +604,7 @@
     }
   }
 
-  @media (min-width: 380px) {
-    .responsive-heading {
-      font-size: 26px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.10rem 0.25rem;
-    }
-  }
-
-  @media (min-width: 392px) {
+  @media (min-width: 390px) {
     .responsive-heading {
       font-size: 26px;
       font-family: 'Centaur', 'Times New Roman', Times, serif;
