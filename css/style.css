@@ -1,10 +1,5 @@
 /********** Template CSS **********/
-@font-face{
-    font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
-    src: url('/assets/fonts/centaur-webfont.woff2') format('woff2'),
-         url('/assets/fonts/centaur-webfont.woff') format('woff');
-    font-weight: 400;
-}
+
 
 :root {
     --primary: #FEA116;
@@ -550,13 +545,13 @@
   
   .responsive-heading {
     font-size: 14px; 
-    font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+    font-family: 'Centaur', 'Times New Roman', Times, serif;
   }
 
   @media (min-width: 200px) {
     .responsive-heading {
       font-size: 15px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -567,7 +562,7 @@
   @media (min-width: 340px) {
     .responsive-heading {
       font-size: 15px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -578,7 +573,7 @@
   @media (min-width: 357px) {
     .responsive-heading {
       font-size: 18px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -589,7 +584,7 @@
   @media (min-width: 374px) {
     .responsive-heading {
       font-size: 20px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -600,7 +595,7 @@
   @media (min-width: 392px) {
     .responsive-heading {
       font-size: 22px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -611,7 +606,7 @@
   @media (min-width: 410px) {
     .responsive-heading {
       font-size: 24px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -622,7 +617,7 @@
   @media (min-width: 428px) {
     .responsive-heading {
       font-size: 26px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -633,7 +628,7 @@
   @media (min-width: 444px) {
     .responsive-heading {
       font-size: 28px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -644,7 +639,7 @@
   @media (min-width: 498px) {
     .responsive-heading {
       font-size: 30px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -655,7 +650,7 @@
   @media (min-width: 498px) {
     .responsive-heading {
       font-size: 34px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {
@@ -666,7 +661,7 @@
   @media (min-width: 600px) {
     .responsive-heading {
       font-size: 40px;
-      font-family: 'Custom-Centaur', 'Times New Roman', Times, serif;
+      font-family: 'Centaur', 'Times New Roman', Times, serif;
     }
 
     .navbar-toggler {

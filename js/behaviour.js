@@ -53,32 +53,6 @@ function setActive(navigation) {
   });
 }
 
-function sendEmail(event) {
-  event.preventDefault();
-  var customerName = document.getElementById("customerName").value;
-  var customerEmail = document.getElementById("customerEmail").value;
-  var emailSubject = document.getElementById("emailSubject").value;
-  var message = document.getElementById("emailBody").value;
-  var emailBody =
-    "<b>Customer Name : </b>" +
-    customerName +
-    "<br/>" +
-    "<b>Customer Email Address : </b>" +
-    customerEmail +
-    "<br/><br/> <b>Message from Customer : </b><br/>" +
-    message +
-    "</b><br/>";
-  Email.send({
-    SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
-    To: "yourbrocoder@gmail.com",
-    From: "allu381993@gmail.com",
-    Subject: emailSubject,
-    Body: emailBody,
-  }).then((message) =>
-    alert("Message sent. Thanks for sharing your feedback!")
-  );
-}
-
 function openOnlineOrderLink() {
   window.open(
     "https://order.online/business/the-grand-malabar-indian-cuisine-11465867",
@@ -102,25 +76,18 @@ function openCompleteMenuOptions() {
 
 var popularFoodMenu = [
   {
-    imageSrc: "img/menu/Puthiyapila_Choru.jpeg",
-    title: "Puthiyapila Choru",
-    price: "$18.99",
-    description:
-      "Ghee rice combo with coconut dal, chicken fry and chicken / beef curry, a treat served to sons-in-law",
-  },
-  {
-    imageSrc: "img/menu/Beef_Ularthiyathu.jpeg",
-    title: "Beef Ularthiyathu",
-    price: "$17.99",
-    description:
-      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection",
-  },
-  {
     imageSrc: "img/menu/Malabar_Chicken_Dum_Biryani.jpeg",
     title: "Malabar Chicken Dum Biriyani",
     price: "$15.99",
     description:
       "Chicken - aromatic short-grain kaima rice, layered with herbs comes with pickle, and raita",
+  },
+  {
+    imageSrc: "img/menu/Puthiyapila_Choru.jpeg",
+    title: "Puthiyapila Choru",
+    price: "$18.99",
+    description:
+      "Ghee rice combo with coconut dal, chicken fry and chicken / beef curry, a treat served to sons-in-law",
   },
   {
     imageSrc: "img/menu/Chemmeen_Shrimp_Fry.jpeg",
@@ -140,6 +107,13 @@ var popularFoodMenu = [
     title: "Alleppey Chicken Curry",
     price: "$15.99",
     description: "Chicken, in coconut milk gravy, warm with spices",
+  },
+  {
+    imageSrc: "img/menu/Beef_Ularthiyathu.jpeg",
+    title: "Beef Ularthiyathu",
+    price: "$17.99",
+    description:
+      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection",
   },
   // Add more items as needed
 ];
@@ -229,9 +203,31 @@ var lovelyFoodMenu = [
   },
 ];
 
-// You can now use the 'beverageItems' array as needed in your JavaScript code.
-
-// You can now use the 'foodItems' array as needed in your JavaScript code.
+function sendEmail(event) {
+  event.preventDefault();
+  var customerName = document.getElementById("customerName").value;
+  var customerEmail = document.getElementById("customerEmail").value;
+  var emailSubject = document.getElementById("emailSubject").value;
+  var message = document.getElementById("emailBody").value;
+  var emailBody =
+    "<b>Customer Name : </b>" +
+    customerName +
+    "<br/>" +
+    "<b>Customer Email Address : </b>" +
+    customerEmail +
+    "<br/><br/> <b>Message from Customer : </b><br/>" +
+    message +
+    "</b><br/>";
+  Email.send({
+    SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
+    To: "yourbrocoder@gmail.com",
+    From: "allu381993@gmail.com",
+    Subject: emailSubject,
+    Body: emailBody,
+  }).then((message) =>
+    alert("Message sent. Thanks for sharing your feedback!")
+  );
+}
 
 // Function to generate HTML from JSON
 function generateFoodMenu(container, foodItems) {
