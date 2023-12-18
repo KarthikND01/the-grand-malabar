@@ -30,7 +30,7 @@
 </head>
 
 <body onload="initiateUI()">
-    <div class="container-xxl bg-white p-0">
+    <div class="container-fluid bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -41,33 +41,33 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0 bg-dark ">
-            <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0">
+        <div class="container-fluid position-relative p-0 bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark-custom px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0" style="background-color:#dbd3d3 !important">
                 <a href="" class="navbar-brand p-0">
-                    <h1 id="responsiveHeading" class="text-primary m-3 responsive-heading">
-                        <img src='img/logo/yellow-logo.png' width='60' height='60'>The Grand Malabar</h1>
+                    <h1 id="responsiveHeading" class="text-gm-primary mt-2 mb-2 responsive-heading" style="font-weight:900;">
+                        <img src='img/logo/TGM-Logo.png' width='60' height='100'>The Grand Malabar</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a id="homeNav" onclick="setActive('homeNav')" href="index.html" class="nav-item nav-link">Home</a>
-                        <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
-                        <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
-                        <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
-                        <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item nav-link">News</a>
+                        <a id="homeNav" onclick="setActive('homeNav')" href="index.html" class="nav-item-custom nav-link-custom">Home</a>
+                        <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item-custom nav-link-custom">About</a>
+                        <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item-custom nav-link-custom">Menu</a>
+                        <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item-custom nav-link-custom">Contact</a>
+                        <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item-custom nav-link-custom">News</a>
                     </div>
                 </div>
             </nav>
 
-            <div class="container-xxl py-3 py-lg-5 bg-dark hero-header mb-3 mb-lg-5">
+            <div class="container-fluid py-3 py-lg-5 bg-dark hero-header mb-3 mb-lg-5">
                 <div class="container my-3 my-lg-5 py-3 py-lg-5">
                     <div class="row align-items-center g-3 g-lg-5">
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="text-white animated slideInLeft">Welcome to <br>Malabar's Flavorful Delights!</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2">Savor the exquisite tastes of Malabar cuisine at our restaurant, where every bite takes you on a journey to God's Own Country!</p>
-                            <a onclick="openOnlineOrderLink()" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Order Online</a>
+                            <a onclick="openOnlineOrderLink()" class="btn btn-primary-custom py-sm-3 px-sm-5 me-3 animated slideInLeft">Order Online</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="" alt="">
@@ -81,7 +81,7 @@
         <!-- Navbar & Hero End -->
 
         <!-- About Start -->
-        <div class="container-xxl py-5" id="about-section">
+        <div class="container-fluid py-5" id="about-section">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
@@ -103,8 +103,8 @@
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Grand Malabar</h1>
-                        <p class="mb-4">Malabar is a historical and geographical region located on the southwestern coast of India, specifically in the state of Kerala. We bring the vibrant flavors and rich culinary heritage of Malabar to your plate. We invite you on a culinary adventure that showcases the unique blend of spices, aromatic herbs, and fresh ingredients that define the Malabar region.</p>
-                        <p class="mb-4">Experience our warm ambiance and let our attentive staff create a memorable dining journey. Whether you're a seasoned food lover or new to Malabari cuisine, we'll transport your taste buds to the enchanting flavors of Malabar with every bite.</p>
+                        <p class="mb-4 paragraph-text">Malabar is a historical and geographical region located on the southwestern coast of India, specifically in the state of Kerala. We bring the vibrant flavors and rich culinary heritage of Malabar to your plate. We invite you on a culinary adventure that showcases the unique blend of spices, aromatic herbs, and fresh ingredients that define the Malabar region.</p>
+                        <p class="mb-4 paragraph-text">Experience our warm ambiance and let our attentive staff create a memorable dining journey. Whether you're a seasoned food lover or new to Malabari cuisine, we'll transport your taste buds to the enchanting flavors of Malabar with every bite.</p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
@@ -120,7 +120,7 @@
                                     <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">200</h1><h3>+</h3>
                                     <div class="ps-4">
                                         <p class="mb-0">Valuable</p>
-                                        <h6 class="text-uppercase mb-0">Customer Reviews</h6>
+                                        <h6 class="text-uppercase mb-0">customr Reviews</h6>
                                     </div>
                                 </div>
                             </div>
@@ -133,12 +133,12 @@
 
 
         <!-- Menu Start -->
-        <div class="container-xxl py-5" id="menu-section">
+        <div class="container-fluid py-5" id="menu-section">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
                     <h1 class="mb-1">Our Culinary Selections</h1>
-                    <a onclick="openCompleteMenuOptions()" class="mb-3 btn btn-secondary" style="text-transform: none;">View Full Menu Options</a>
+                    <a onclick="openCompleteMenuOptions()" class="mb-3 btn btn-primary-custom" style="text-transform: none;">View Full Menu Options</a>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -196,11 +196,11 @@
         <!-- Menu End -->
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="text-center">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-                    <h1 class="mb-5">Our Customers Say!!!</h1>
+                    <h1 class="mb-5">Our customrs Say!!!</h1>
                 </div>
                 <div id="testimonialDivContainer" class="container"></div>
             </div>
@@ -208,7 +208,7 @@
         <!-- Testimonial End -->
         
         <!-- Contact Start -->
-        <div class="container-xxl py-5" id="connect-section">
+        <div class="container-fluid py-5" id="connect-section">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
@@ -221,13 +221,13 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="customerName" maxlength="50" placeholder="Your Name">
+                                            <input type="text" class="form-control" id="customrName" maxlength="50" placeholder="Your Name">
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="customerEmail" placeholder="Your Email">
+                                            <input type="email" class="form-control" id="customrEmail" placeholder="Your Email">
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                        <button class="btn btn-primary-custom w-100 py-3" type="submit">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -281,23 +281,20 @@
                     </div>
                     <div class="col">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h6 class="text-light fw-normal">MON : <i class="text-primary" style="font-size: 12px;">Closed</i></h6>
-                        <h6 class="text-light fw-normal">TUE - WED - THU : <i class="text-primary" style="font-size: 12px;">4:30 - 10:30 PM</i></h6>
-                        <h6 class="text-light fw-normal">FRI : <i class="text-primary" style="font-size: 12px;">4:30 - 11:00 PM</i></h6>
-                        <h6 class="text-light fw-normal">SAT : <i class="text-primary" style="font-size: 12px;">3:00 - 11:00  PM</i></h6>
-                        <h6 class="text-light fw-normal">SUN : <i class="text-primary" style="font-size: 12px;">3:00 - 10:30 PM</i></h6>
+                        <h6 class="text-light fw-normal">MON : <i class="text-grand-malabar-color" style="font-size: 12px;">Closed</i></h6>
+                        <h6 class="text-light fw-normal">TUE - WED - THU : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 3:00 PM, 4:30 - 10:30 PM</i></h6>
+                        <h6 class="text-light fw-normal">FRI : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 3:00 PM, 4:30 - 11:00 PM</i></h6>
+                        <h6 class="text-light fw-normal">SAT : <i class="text-grand-malabar-color" style="font-size: 12px;">3:00 - 11:00  PM</i></h6>
+                        <h6 class="text-light fw-normal">SUN : <i class="text-grand-malabar-color" style="font-size: 12px;">3:00 - 10:30 PM</i></h6>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">TheGrandMalabarIndianCuisine</a>, All Rights Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							<a style="color: #0F172B !important;" href="https://htmlcodex.com">Designed By HTML Codex</a>
-                        </div>
+        </div>
+        <div class="container-fluid bg-dark text-light footer p-2 wow fadeIn" data-wow-delay="0.1s" style="background-color:#dbd3d3 !important">
+            <div class="copyright p-2">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a>TheGrandMalabarIndianCuisine</a>, All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -306,7 +303,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary-custom btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -322,7 +319,7 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
     <script src="js/behaviour.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
