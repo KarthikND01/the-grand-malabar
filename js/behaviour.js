@@ -209,6 +209,12 @@ function sendEmail(event) {
   var customerEmail = document.getElementById("customerEmail").value;
   var emailSubject = document.getElementById("emailSubject").value;
   var message = document.getElementById("emailBody").value;
+  
+  if (!customerName || !customerEmail || !emailSubject || !message) {
+    alert("Please fill out all the fields before sending the message. Thanks!");
+    return;
+  }
+
   var emailBody =
     "<b>Customer Name : </b>" +
     customerName +
