@@ -212,27 +212,26 @@ function sendEmail(event) {
   
   if (!customerName || !customerEmail || !emailSubject || !message) {
     alert("Please fill out all the fields before sending the message. Thanks!");
-    return;
+  } else {
+    var emailBody =
+      "<b>Customer Name : </b>" +
+      customerName +
+      "<br/>" +
+      "<b>Customer Email Address : </b>" +
+      customerEmail +
+      "<br/><br/> <b>Message from Customer : </b><br/>" +
+      message +
+      "</b><br/>";
+    Email.send({
+      SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
+      To: "yourbrocoder@gmail.com",
+      From: "allu381993@gmail.com",
+      Subject: emailSubject,
+      Body: emailBody,
+    }).then((message) =>
+      alert("Message sent. Thanks for sharing your feedback!")
+    );
   }
-
-  var emailBody =
-    "<b>Customer Name : </b>" +
-    customerName +
-    "<br/>" +
-    "<b>Customer Email Address : </b>" +
-    customerEmail +
-    "<br/><br/> <b>Message from Customer : </b><br/>" +
-    message +
-    "</b><br/>";
-  Email.send({
-    SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
-    To: "yourbrocoder@gmail.com",
-    From: "allu381993@gmail.com",
-    Subject: emailSubject,
-    Body: emailBody,
-  }).then((message) =>
-    alert("Message sent. Thanks for sharing your feedback!")
-  );
 }
 
 // Function to generate HTML from JSON
