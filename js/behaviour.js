@@ -10,32 +10,7 @@ function closeImagePopup() {
   popup.style.display = "none";
 }
 
-/* window.addEventListener("resize", function () {
-  var heading = document.getElementById("responsiveHeading");
-  var windowWidth = window.innerWidth;
-
-  if (windowWidth < 480) {
-    heading.innerHTML =
-      "<img src='img/logo/yellow-logo.PNG' width='80' height='220'>The Grand Malabar";
-  } else {
-    heading.innerHTML =
-      "<img src='img/logo/yellow-logo.PNG' width='80' height='220'>The Grand Malabar";
-  }
-});*/
-
 function initiateUI() {
-  /* Set heading 
-  var heading = document.getElementById("responsiveHeading");
-  var windowWidth = window.innerWidth;
-
-  if (windowWidth < 480) {
-    heading.innerHTML =
-      "<img src='img/logo/yellow-logo.PNG' width='80' height='220'>The Grand Malabar";
-  } else {
-    heading.innerHTML =
-      "<img src='img/logo/yellow-logo.PNG' width='80' height='220'></i>The Grand Malabar";
-  }*/
-
   /* Set Menu Link Active */
   var element = document.getElementById("homeNav");
   element.classList.add("active");
@@ -68,10 +43,7 @@ function openNewsLink() {
 }
 
 function openCompleteMenuOptions() {
-  window.open(
-    "https://drive.google.com/file/d/1Y_PsVHBzoSIOv-kZ44A1QqtaVBJjFt3o/view",
-    "_blank"
-  );
+  window.open("assets/pdf/TGM-Menu.pdf", "_blank");
 }
 
 var popularFoodMenu = [
@@ -209,7 +181,7 @@ function sendEmail(event) {
   var customerEmail = document.getElementById("customerEmail").value;
   var emailSubject = document.getElementById("emailSubject").value;
   var message = document.getElementById("emailBody").value;
-  
+
   if (!customerName || !customerEmail || !emailSubject || !message) {
     alert("Please fill out all the fields before sending the message. Thanks!");
   } else {
@@ -223,9 +195,9 @@ function sendEmail(event) {
       message +
       "</b><br/>";
     Email.send({
-      SecureToken: "83ae7cba-4147-45c3-9e4f-2336d55b7a04",
-      To: "yourbrocoder@gmail.com",
-      From: "allu381993@gmail.com",
+      SecureToken: "ded037d2-b264-4752-9436-d8d27d86dbfe",
+      To: "thegrandmalabar@gmail.com",
+      From: "info@thegrandmalabar.com",
       Subject: emailSubject,
       Body: emailBody,
     }).then((message) =>
@@ -651,3 +623,24 @@ function showComingSoonPopUp() {
   // Append the div to the body
   document.body.appendChild(comingSoonDiv);
 }
+
+//Array of image URLs
+const imageUrls = [
+  "img/menu/Alleppey_Chicken_Curry.jpeg",
+  "img/menu/Chemmeen_Shrimp_Fry.jpeg",
+  "img/menu/Beef_Ularthiyathu.jpeg",
+  "img/menu/Kadai_Chicken.jpeg",
+  "img/menu/Fish_Cutlets_2pc.jpeg",
+];
+
+// Shuffle the array of image URLs
+shuffleArray(imageUrls);
+
+// Create and append image elements to the container
+const container = document.getElementById("background-container");
+imageUrls.forEach((imageUrl) => {
+  const img = document.createElement("img");
+  img.src = imageUrl;
+  img.classList.add("second-background-image");
+  container.appendChild(img);
+});

@@ -2,11 +2,12 @@
 
 
 :root {
-    --primary: #ba6568;
+    --primary: #FEA116;
     --light: #F1F8FF;
     --dark: #0F172B;
     --light-dark: #635f5f;
     --grand-malabar-primary-color: #622a35;
+    --grand-malabar-logo-white: #ffffff;
 }
 
 .ff-secondary {
@@ -122,6 +123,8 @@
     }
 
     .navbar-dark .navbar-collapse {
+        /*display:basis !important;flex-basis:auto;*/
+        /* flex-basis:100%;flex-grow:1;align-items:center; */
         margin-top: 15px;
         border-top: 1px solid rgba(255, 255, 255, .1)
     }
@@ -149,7 +152,7 @@
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: var(--dark) !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
     }
 }
 
@@ -554,142 +557,6 @@
     margin-right: 10px; 
     text-decoration: none;
   }
-  
-  .responsive-heading {
-    font-size: 14px; 
-    font-family: 'Centaur', 'Times New Roman', Times, serif;
-  }
-
-  @media (min-width: 200px) {
-    .responsive-heading {
-      font-size: 18px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.05rem 0.20rem;
-    }
-  }
-
-  @media (min-width: 330px) {
-    .responsive-heading {
-      font-size: 20px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.05rem 0.20rem;
-    }
-  }
-
-  @media (min-width: 347px) {
-    .responsive-heading {
-      font-size: 22px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.05rem 0.20rem;
-    }
-  }
-
-  @media (min-width: 365px) {
-    .responsive-heading {
-      font-size: 22px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.10rem 0.25rem;
-    }
-  }
-
-  @media (min-width: 390px) {
-    .responsive-heading {
-      font-size: 26px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.20rem 0.60rem;
-    }
-  }
-
-  @media (min-width: 410px) {
-    .responsive-heading {
-      font-size: 26px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
-
-  @media (min-width: 428px) {
-    .responsive-heading {
-      font-size: 26px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
-
-  @media (min-width: 444px) {
-    .responsive-heading {
-      font-size: 28px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
-
-  @media (min-width: 498px) {
-    .responsive-heading {
-      font-size: 30px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
-
-  @media (min-width: 498px) {
-    .responsive-heading {
-      font-size: 34px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
-
-  @media (min-width: 600px) {
-    .responsive-heading {
-      font-size: 40px;
-      font-family: 'Centaur', 'Times New Roman', Times, serif;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
-  
-  @media (min-width: 1230px) {
-    .responsive-heading {
-      font-size: 50px;
-    }
-
-    .navbar-toggler {
-        padding:0.25rem 0.75rem;
-    }
-  }
 
   .navbar-dark-custom .navbar-brand {
     color:#fff
@@ -709,7 +576,7 @@
     color:#fff
   }
   .navbar-dark-custom .navbar-toggler {
-    color:rgba(89, 12, 12,0.55);border-color:rgba(89, 12, 12,0.1)
+    color:rgba(255, 255, 255, 0.893);border-color:rgba(206, 198, 198, 0.45)
   }
   .navbar-dark-custom .navbar-toggler-icon {
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2889, 12, 12,0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") 
@@ -726,7 +593,7 @@
     margin-left: 25px;
     padding: 35px 0;
     font-size: 15px;
-    color: var(--light-dark) !important;
+    color: var(--grand-malabar-logo-white) !important;
     text-transform: uppercase;
     font-weight: 500;
     outline: none;
@@ -739,7 +606,7 @@
 
 .navbar-dark-custom .navbar-nav .nav-link-custom:hover,
 .navbar-dark-custom .navbar-nav .nav-link-custom.active {
-    color: var(--grand-malabar-primary-color) !important;
+    color: var(--grand-malabar-logo-white) !important;
 }
 
 .navbar-dark-custom .navbar-brand img {
@@ -789,9 +656,9 @@
 }
 
   .nav-item.show .nav-link-custom {
-    color:#495057;
-    background-color:#F1F8FF;
-    border-color:#dee2e6 #dee2e6 #F1F8FF
+    color:#ffffff;
+    background-color:#ffffff;
+    border-color:#ffffff #ffffff #ffffff
   }
   .nav-tabs .dropdown-menu {
     margin-top:-1px;
@@ -805,7 +672,7 @@
   } 
   .nav-pills .nav-link-custom.active,.nav-pills .show>.nav-link-custom {
     color:#fff;
-    background-color:#622a35;
+    background-color:#ffffff;
   }
   .nav-fill>.nav-link-custom,.nav-fill .nav-item {
     flex:1 1 auto;
@@ -831,7 +698,7 @@
 }
 
 .text-grand-malabar-color {
-    color: #d8b6bd !important;
+    color: #FEA116 !important;
 }
 
 .btn-primary-custom {
@@ -841,23 +708,23 @@
  }
 .btn-primary-custom:hover {
     color:#000;
-    background-color:#ba6568;
-    border-color:#ba6568
+    background-color:#FEA116;
+    border-color:#FEA116
 }
 .btn-check:focus+.btn-primary-custom,.btn-primary-custom:focus {
     color:#000;
-    background-color:#ba6568;
+    background-color:#FEA116;
     border-color:#e53f08;
     box-shadow:0 0 0 .25rem rgba(216,137,19,0.5)
 }
 .btn-check:checked+.btn-primary-custom,.btn-check:active+.btn-primary-custom,.btn-primary-custom:active,.btn-primary-custom.active,.show>.btn-primary-custom.dropdown-toggle {
-    color:#000;background-color:#ba6568;border-color:#e53f08
+    color:#000;background-color:#FEA116;border-color:#e53f08
 }
 .btn-check:checked+.btn-primary-custom:focus,.btn-check:active+.btn-primary-custom:focus,.btn-primary-custom:active:focus,.btn-primary-custom.active:focus,.show>.btn-primary-custom.dropdown-toggle:focus {
     box-shadow:0 0 0 .25rem rgba(216,137,19,0.5)
 }
 .btn-primary-custom:disabled,.btn-primary-custom.disabled {
-    color:#000;background-color:#ba6568;border-color:#ba6568
+    color:#000;background-color:#FEA116;border-color:#FEA116
 }
 .text-gm-primary{
     color: #622a35;
@@ -874,3 +741,108 @@
 .text-gm-white-50 {
     color:rgba(219, 211, 211,0.5) !important
 }
+
+.gradient-custom {
+    background: linear-gradient(to right, #622a35, #dbd3d3);
+    /* Additional styles for the container if needed */
+    color: #fff; /* Text color */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+
+/* Main Div Design - START */
+
+.main-div {
+    background-image: url(../img/menu/Main_menu1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.fixed-size-div {
+    width: 100%; /* Set the desired width */
+    height: 600px; /* Set the desired height */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.73); /* Adjust the alpha (fourth value) for transparency */
+}
+
+.logo {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px; /* Set the width of your logo */
+    height: 300px; /* Set the height of your logo */
+}
+/* Main Div Design - END  */
+
+/* Second Image Div Container - START*/
+.second-image-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.second-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.second-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.second-div-text {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1; 
+  }
+
+/* Second Image Div Container - END*/
+
+
+/* Footer Div - Start */
+.footer {
+    position: relative;
+    background-image: url('../img/Brick-wall.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.footer-text {
+    z-index: 2; 
+}
+
+/* Footer Div - End */

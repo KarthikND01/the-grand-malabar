@@ -26,57 +26,37 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.min.css?v=2.0" rel="stylesheet">
 </head>
 
-<body onload="initiateUI()">
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+<body>
+        <div class="container-fluid bg-white p-0" id="home-section">
+            <!-- Spinner Start -->
+            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
             </div>
-        </div>
-        <!-- Spinner End -->
+            <!-- Spinner End -->
 
+            <div class="main-div fixed-size-div">
+            <div class="overlay"></div>
+            <img class="logo" src="img/logo/TGM-Logo.png" alt="Logo">
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0 bg-dark">
-            <nav class="navbar navbar-expand-lg navbar-dark-custom px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0" style="background-color:#dbd3d3 !important">
-                <a href="" class="navbar-brand p-0">
-                    <h1 id="responsiveHeading" class="text-gm-primary mt-2 mb-2 responsive-heading" style="font-weight:900;">
-                        <img src='img/logo/TGM-Logo.png' width='60' height='100'>The Grand Malabar</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0">
+                <button class="navbar-toggler p-2 m-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a id="homeNav" onclick="setActive('homeNav')" href="index.html" class="nav-item-custom nav-link-custom">Home</a>
-                        <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item-custom nav-link-custom">About</a>
-                        <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item-custom nav-link-custom">Menu</a>
-                        <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item-custom nav-link-custom">Contact</a>
-                        <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item-custom nav-link-custom">News</a>
+                        <a id="homeNav" onclick="setActive('homeNav')" href="#home-section" class="nav-item nav-link">Home</a>
+                        <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
+                        <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
+                        <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
+                        <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item nav-link">News</a>
                     </div>
                 </div>
-            </nav>
-
-            <div class="container-fluid py-3 py-lg-5 bg-dark hero-header mb-3 mb-lg-5">
-                <div class="container my-3 my-lg-5 py-3 py-lg-5">
-                    <div class="row align-items-center g-3 g-lg-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-gm-white animated slideInLeft">Welcome to <br>Malabar's Flavorful Delights!</h1>
-                            <p class="text-gm-white animated slideInLeft mb-4 pb-2">Savor the exquisite tastes of Malabar cuisine at our restaurant, where every bite takes you on a journey to God's Own Country!</p>
-                            <a onclick="openOnlineOrderLink()" class="btn btn-primary-custom py-sm-3 px-sm-5 me-3 animated slideInLeft">Order Online</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
+            </nav> 
         </div>
         <!-- Navbar & Hero End -->
 
@@ -87,16 +67,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start" style="padding: 0; margin: 0">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/menu/Main_menu1.jpeg" style="margin-bottom: 1%;margin-right: 1%;">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/menu/Main_menu2.jpeg" style="margin-bottom: 1%;margin-right: 1%;">
                             </div>
                             <div class="col-6 text-start"  style="padding: 0; margin: 0;">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/menu/Puthiyapila_Choru.jpeg" style="margin-top: 16.5%;margin-left: 1.5%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/menu/Malabar_Chicken_Dum_Biryani.jpeg" style="margin-top: 16.5%;margin-left: 1.5%;">
                             </div>
                             <div class="col-6 text-end" style="padding: 0; margin: 0;">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/menu/Fish_Nirvana.jpeg" style="margin-top: 0.5%;margin-right: 0.2%;">
                             </div>
                             <div class="col-6 text-end" style="padding: 0; margin: 0;">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/menu/Main_menu2.jpeg" style="margin-top: 0.5%;margin-left: 1.5%;">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/menu/Puthiyapila_Choru.jpeg" style="margin-top: 0.5%;margin-left: 1.5%;">
                             </div>
                         </div>
                     </div>
@@ -131,6 +111,15 @@
         </div>
         <!-- About End -->
 
+        <div class="second-image-container" id="background-container">
+            <div class="second-overlay"></div>
+            <!-- Add text on top -->
+             <div class="second-div-text col-10">
+                    <h1 class="text-white animated slideInLeft">Explore the Flavors of Malabar!</h1>
+                    <p class="text-white animated slideInLeft mb-4 pb-1">Savor the exquisite tastes of Malabar cuisine at our restaurant, where every bite takes you on a journey to God's Own Country!</p>
+                    <a onclick="openOnlineOrderLink()" class="btn btn-primary animated slideInLeft">Order Online</a>
+            </div>
+        </div>
 
         <!-- Menu Start -->
         <div class="container-fluid py-5" id="menu-section">
@@ -138,7 +127,7 @@
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
                     <h1 class="mb-1">Our Culinary Selections</h1>
-                    <a onclick="openCompleteMenuOptions()" class="mb-3 btn btn-primary-custom" style="text-transform: none;">View Full Menu Options</a>
+                    <a onclick="openCompleteMenuOptions()" class="mb-3 btn btn-primary" style="text-transform: none;">View Full Menu Options</a>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -196,7 +185,7 @@
         <!-- Menu End -->
 
         <!-- Testimonial Start -->
-        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="text-center">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
@@ -244,7 +233,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary-custom w-100 py-3" type="submit">Send Message</button>
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -262,15 +251,16 @@
         <!-- Contact End -->
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-3">
+        <div class="footer text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="footer-overlay"></div>
+            <div class="container py-3 footer-text">
                 <div class="row g-5">
-                    <div class="col">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                    <div class="col" style="z-index: 2 !important;">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" style="z-index: 2 !important; ">Contact</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>347 Erb St. W #4, Waterloo, ON N2L 1W4</p>
                         <p class="mb-2" ></i><a href="tel:+15192659598" style="color: #F1F8FF;"><i class="fa fa-phone-alt me-3"></i>+1-519-265-9598</a></p>
                     </div>
-                    <div class="col">
+                    <div class="col" style="z-index: 2 !important;">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Follow us</h4>
                         <div class="list-container">
                             <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/thegrandmalabar/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -279,7 +269,7 @@
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col" style="z-index: 2 !important;">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
                         <h6 class="text-light fw-normal">MON : <i class="text-grand-malabar-color" style="font-size: 12px;">Closed</i></h6>
                         <h6 class="text-light fw-normal">TUE - WED - THU : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 3:00 PM, 4:30 - 10:30 PM</i></h6>
@@ -289,11 +279,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid bg-dark text-light footer p-2 wow fadeIn" data-wow-delay="0.1s" style="background-color:#dbd3d3 !important">
-            <div class="copyright p-2">
+            <div class="copyright p-0">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="col-md-6 text-center text-md-start mb-1 mb-md-0" style="z-index: 2 !important; color: #F1F8FF !important;">
                         &copy; <a>TheGrandMalabarIndianCuisine</a>, All Rights Reserved.
                     </div>
                 </div>
@@ -303,7 +291,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary-custom btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -320,7 +308,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.min.js"></script>
-    <script src="js/behaviour.min.js?v=1.3"></script>
+    <script src="js/behaviour.min.js?v=2.0"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
