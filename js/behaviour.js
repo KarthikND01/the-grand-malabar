@@ -659,50 +659,31 @@ imageUrls.forEach((imageUrl) => {
 });
 
 /* Slide show - Start */
-// JavaScript for changing background image with horizontal slide and fade effect
-var images = [
-  "img/menu/Main_menu1.jpeg",
-  "img/menu/Main_menu2.jpeg",
-  "img/menu/Puthiyapila_Choru.jpeg",
-  "img/menu/TGM-Interior-1.jpeg",
-  "img/menu/TGM-interior-2.jpeg",
-  "img/menu/TGM-interior-3.jpeg",
-  "img/menu/TGM-interior-4.jpeg",
-  "img/menu/Shrimp_lazeez.jpeg",
-  "img/menu/Chemmeen_Shrimp_Fry.jpeg",
-  // Add more image URLs as needed
-];
+const slideshowContainer = document.getElementById("slideshowContainer");
+const slides = document.querySelectorAll(".mySlides img");
 
-var currentIndex = 0;
-var slideshowContainer = document.getElementById("slideshowContainer");
-var slides = document.querySelectorAll(".mySlides");
-var isTransitioningBack = false;
-var direction = 1; // 1 for forward, -1 for backward
+function transitionToNextImage() {
+  const currentIndex = Array.from(slides).findIndex((img) =>
+    img.classList.contains("header-zoomed")
+  );
 
-function changeSlide() {
-  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+  slides[currentIndex].classList.remove("header-zoomed");
+  const nextIndex = (currentIndex + 1) % slides.length;
+  slides[nextIndex].classList.add("header-zoomed");
 
-  // Set the new image
-  slides[currentIndex].querySelector("img").src = images[currentIndex];
-
-  // Slide effect
-  slideshowContainer.style.transform =
-    "translateX(-" + currentIndex * 100 + "%)";
-
-  if (currentIndex === slides.length - 1 && direction === 1) {
-    direction = -1;
-  } else if (currentIndex === 0 && direction === -1) {
-    direction = 1;
-  }
-
-  setTimeout(changeSlide, 8000);
+  // Ensure the next image is visible by resetting the transform
+  slideshowContainer.style.transform = `translateX(-${nextIndex * 100}%)`;
 }
 
-window.onload = function () {
-  setTimeout(function () {
-    changeSlide();
+function startSlideshow() {
+  slides[0].classList.add("header-zoomed");
+
+  setInterval(() => {
+    transitionToNextImage();
   }, 3000);
-};
+}
+
+startSlideshow();
 /* Slide show - End */
 
 var changeNavBarBg = true;
