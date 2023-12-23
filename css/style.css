@@ -1,6 +1,5 @@
 /********** Template CSS **********/
 
-
 :root {
     --primary: #FEA116;
     --light: #F1F8FF;
@@ -156,6 +155,9 @@
     }
 }
 
+.fb-bar-expand-background {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%) !important;;
+}
 
 /*** Hero Header ***/
 .hero-header {
@@ -751,17 +753,38 @@
 
 
 /* Main Div Design - START */
-
 .main-div {
-    background-image: url(../img/menu/Main_menu1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .fixed-size-div {
-    width: 100%; /* Set the desired width */
+    position: relative;
+    max-width: 100%; /* Set the desired width */
     height: 600px; /* Set the desired height */
+    overflow: hidden;
+}
+
+.slideshow-container {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    transition: transform 4s ease-in-out, opacity 1s ease-in-out;
+}
+
+.mySlides {
+    width: 100%;
+    height: 600px;
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
 .overlay {
@@ -770,7 +793,7 @@
     left: 0;
     width: 100%;
     height: 600px;
-    background: rgba(0, 0, 0, 0.73); /* Adjust the alpha (fourth value) for transparency */
+    background: rgba(0, 0, 0, 0.73);
 }
 
 .logo {

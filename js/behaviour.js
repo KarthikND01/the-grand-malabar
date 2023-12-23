@@ -92,6 +92,13 @@ var popularFoodMenu = [
 
 var specialFoodMenu = [
   {
+    imageSrc: "img/menu/Shrimp_lazeez.jpeg",
+    title: "Shrimp Lazeez",
+    price: "$18.99",
+    description:
+      "Creamy shrimp delicacy in an onion-tomato gravy, and warm spices",
+  },
+  {
     imageSrc: "img/menu/Kadai_Chicken.jpeg",
     title: "Kadai Chicken",
     price: "$15.99",
@@ -171,7 +178,13 @@ var lovelyFoodMenu = [
     title: "Pineapple Mojito",
     price: "$5.49",
     description:
-      "A tropical delight combines fresh pineapple, mint and lime for a refreshingly sweet and zesty cocktail experience.",
+      "A tropical delight combines fresh pineapple, mint and lime for a refreshingly sweet and zesty cocktail experience",
+  },
+  {
+    imageSrc: "img/menu/Gulab-Jamun.jpeg",
+    title: "Gulab Jamun & Ice cream",
+    price: "$7.99",
+    description: "Warm dumplings topped with ice cream",
   },
 ];
 
@@ -644,3 +657,62 @@ imageUrls.forEach((imageUrl) => {
   img.classList.add("second-background-image");
   container.appendChild(img);
 });
+
+/* Slide show - Start */
+// JavaScript for changing background image with horizontal slide and fade effect
+var images = [
+  "img/menu/Main_menu1.jpeg",
+  "img/menu/Main_menu2.jpeg",
+  "img/menu/Puthiyapila_Choru.jpeg",
+  "img/menu/TGM-Interior-1.jpeg",
+  "img/menu/TGM-interior-2.jpeg",
+  "img/menu/TGM-interior-3.jpeg",
+  "img/menu/TGM-interior-4.jpeg",
+  "img/menu/Shrimp_lazeez.jpeg",
+  "img/menu/Chemmeen_Shrimp_Fry.jpeg",
+  // Add more image URLs as needed
+];
+
+var currentIndex = 0;
+var slideshowContainer = document.getElementById("slideshowContainer");
+var slides = document.querySelectorAll(".mySlides");
+var isTransitioningBack = false;
+var direction = 1; // 1 for forward, -1 for backward
+
+function changeSlide() {
+  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+
+  // Set the new image
+  slides[currentIndex].querySelector("img").src = images[currentIndex];
+
+  // Slide effect
+  slideshowContainer.style.transform =
+    "translateX(-" + currentIndex * 100 + "%)";
+
+  if (currentIndex === slides.length - 1 && direction === 1) {
+    direction = -1;
+  } else if (currentIndex === 0 && direction === -1) {
+    direction = 1;
+  }
+
+  setTimeout(changeSlide, 8000);
+}
+
+window.onload = function () {
+  setTimeout(function () {
+    changeSlide();
+  }, 3000);
+};
+/* Slide show - End */
+
+var changeNavBarBg = true;
+function changeIconBGColor() {
+  var navBarId = document.getElementById("navBarId");
+  if (changeNavBarBg) {
+    navBarId.classList.add("fb-bar-expand-background");
+    changeNavBarBg = false;
+  } else {
+    navBarId.classList.remove("fb-bar-expand-background");
+    changeNavBarBg = true;
+  }
+}

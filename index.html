@@ -26,10 +26,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.min.css?v=2.0" rel="stylesheet">
+    <link href="css/style.css?v=2.0" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
         <div class="container-fluid bg-white p-0" id="home-section">
             <!-- Spinner Start -->
             <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -40,23 +40,54 @@
             <!-- Spinner End -->
 
             <div class="main-div fixed-size-div">
-            <div class="overlay"></div>
-            <img class="logo" src="img/logo/TGM-Logo.png" alt="Logo">
-
-            <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0">
-                <button class="navbar-toggler p-2 m-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a id="homeNav" onclick="setActive('homeNav')" href="#home-section" class="nav-item nav-link">Home</a>
-                        <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
-                        <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
-                        <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
-                        <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item nav-link">News</a>
+                <div class="slideshow-container" id="slideshowContainer">
+                    <div class="mySlides">
+                        <img src="img/menu/Main_menu1.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/Main_menu2.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/Puthiyapila_Choru.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/TGM-Interior-1.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/TGM-interior-2.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/TGM-interior-3.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/TGM-interior-4.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/Shrimp_lazeez.jpeg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/menu/Chemmeen_Shrimp_Fry.jpeg">
                     </div>
                 </div>
-            </nav> 
+                <div class="overlay"></div>
+                <img class="logo" src="img/logo/TGM-Logo.png" alt="Logo">
+    
+                <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0" id="navBarId">
+                    <button class="navbar-toggler p-2 m-2 mt-3" type="button" onclick="changeIconBGColor()" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0 pe-4">
+                            <a id="homeNav" onclick="setActive('homeNav')" href="#home-section" class="nav-item nav-link">Home</a>
+                            <a id="OrderNav" onclick="openOnlineOrderLink()" href="#" class="nav-item nav-link">Order Online</a>
+                            <a id="aboutNav" onclick="setActive('aboutNav')" href="#about-section" class="nav-item nav-link">About</a>
+                            <a id="menuNav" onclick="setActive('menuNav')" href="#menu-section" class="nav-item nav-link">Menu</a>
+                            <a id="contactNav"onclick="setActive('contactNav')" href="#connect-section" class="nav-item nav-link">Contact</a>
+                            <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item nav-link">News</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
         <!-- Navbar & Hero End -->
 
@@ -308,7 +339,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.min.js"></script>
-    <script src="js/behaviour.min.js?v=2.0"></script>
+    <script src="js/behaviour.js?v=2.0"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
