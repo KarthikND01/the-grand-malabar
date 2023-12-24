@@ -830,6 +830,24 @@
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(56, 179, 241, 0.321) 100%);
 }
 
+.wave-footer {
+    position:absolute;
+    transform: rotate(180deg);
+    top: -92px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(rgb(0, 0, 0) 0%, rgba(221, 116, 3, 0.715) 100%);
+}
+
+.waves-footer {
+    position:relative;
+    width: 100%;
+    height:2vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+
 .waves {
     position:relative;
     width: 100%;
@@ -937,3 +955,95 @@
 }
 
 /* Footer Div - End */
+
+.wgr-logo{
+    position: relative;
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 2px;
+}
+
+.uber-logo{
+    position: relative;
+    padding-right: 30px;
+    width: 180px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.dash-logo{
+    position: relative;
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.skip-logo{
+    position: relative;
+    padding-left: 30px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 630px) {
+    .wgr-logo{
+        position: relative;
+        width: 200px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .uber-logo{
+        position: relative;
+        padding-right: 30px;
+        width: 150px;
+        height: 70px;
+        cursor: pointer;
+    }
+    
+    .dash-logo{
+        position: relative;
+        width: 150px;
+        height: 80px;
+        cursor: pointer;
+    }
+    
+    .skip-logo{
+        position: relative;
+        padding-left: 30px;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 485px) {
+    .uber-logo{
+        position: relative;
+        padding-right: 15px;
+        width: 100px;
+        height: 60px;
+        cursor: pointer;
+    }
+    
+    .dash-logo{
+        position: relative;
+        width: 100px;
+        height: 70px;
+        cursor: pointer;
+    }
+    
+    .skip-logo{
+        position: relative;
+        padding-left: 15px;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+}

@@ -650,7 +650,7 @@ const imageUrls = [
 shuffleArray(imageUrls);
 
 // Create and append image elements to the container
-const container = document.getElementById("background-container");
+const container = document.getElementById("order-online-id");
 imageUrls.forEach((imageUrl) => {
   const img = document.createElement("img");
   img.src = imageUrl;
@@ -695,5 +695,32 @@ function changeIconBGColor() {
   } else {
     navBarId.classList.remove("fb-bar-expand-background");
     changeNavBarBg = true;
+  }
+}
+
+function openPopup() {
+  document.getElementById("deliveryPopup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("deliveryPopup").style.display = "none";
+}
+
+function openOnlineDelivery(partner) {
+  if (partner === "uber") {
+    window.open(
+      "https://www.ubereats.com/ca/store/the-grand-malabar-indian-cuisine/KkngsvkSWTOLQuBi0o8LCA?diningMode=DELIVERY",
+      "_blank"
+    );
+  } else if (partner === "dash") {
+    window.open(
+      "https://www.doordash.com/store/the-grand-malabar-indian-cuisine-waterloo-24701025/",
+      "_blank"
+    );
+  } else if (partner === "skip") {
+    window.open(
+      "https://www.skipthedishes.com/the-grand-malabar-indian-cuisine",
+      "_blank"
+    );
   }
 }
