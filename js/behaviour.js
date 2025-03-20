@@ -42,8 +42,12 @@ function openNewsLink() {
   );
 }
 
-function openCompleteMenuOptions() {
-  window.open("assets/pdf/TGM-Menu.pdf", "_blank");
+function openCompleteMenuOptions(location) {
+  if (location === "cambridge") {
+    window.open("assets/pdf/TGM_Express_Menu.pdf", "_blank");
+  } else if (location === "waterloo") {
+    window.open("assets/pdf/TGM-Menu.pdf", "_blank");
+  }
 }
 
 var popularFoodMenu = [
@@ -188,6 +192,260 @@ var lovelyFoodMenu = [
   },
 ];
 
+var specialFoodMenuCambridge = [
+  {
+    imageSrc: "img/menu/Chatti_Choru.jpeg",
+    title: "Chatti Choru",
+    price: "$19.99",
+    description:
+      "Kerala (Jaya) Rice with a lot of sides! Fish curry, Moru (Spiced curd) curry, a veggie side (a spiced stir fry), Kerala fish fry, a beef fry, pickle and pappadom, and finished with an omelette!",
+  },
+  {
+    imageSrc: "img/menu/Malabar_Chicken_Dum_Biryani.jpeg",
+    title: "Malabar Chicken Dum Biriyani",
+    price: "$15.99",
+    description:
+      "Chicken - aromatic short-grain kaima rice, layered with herbs comes with pickle, and raita",
+  },
+  {
+    imageSrc: "img/menu/Puthiyapila_Choru.jpeg",
+    title: "Puthiyapila Choru",
+    price: "$18.99",
+    description:
+      "Ghee rice combo with coconut dal, chicken fry and chicken / beef curry, a treat served to sons-in-law",
+  },
+  {
+    imageSrc: "img/menu/Chicken_Mandhi.jpeg",
+    title: "Chicken Mandhi",
+    price: "$24.99(H) / $49.99(F)",
+    description: "Aromatic Rice layered with smoky chicken",
+  },
+  {
+    imageSrc: "img/menu/Fish_mandhi.jpeg",
+    title: "Fish Mandhi",
+    price: "$24.99(H)",
+    description: "Aromatic Rice layered with fried fish",
+  },
+  {
+    imageSrc: "img/menu/Kizhi_porotta.jpeg",
+    title: "Beef Kizhi Parotta",
+    price: "$16.99",
+    description:
+      "Kerala parottas layered with beef curry and aromatics, wrapped in a banana leaf and pan-baked",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Kappa Biriyani",
+    price: "$15.99",
+    description: "Yuca (tapioca) layered with beef curry",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Dosas",
+    price: "$8.99 - $15.99",
+    description:
+      "variety of dosa. See the Full Menu link above for complete list",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Paal Kappa with beef or fish",
+    price: "$16.99",
+    description:
+      "Tapioca (kappa) is cooked in creamy coconut milk and paired with spicy beef or fish curry",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Kappa w/ fish curry",
+    price: "$14.99",
+    description:
+      "Comforting tapioca (kappa) with the rich flavors of a traditional fish curry",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Pazhampori (2) – beef combo",
+    price: "$12.99",
+    description:
+      "A combination of the sweet, crispy Pazham pori (banana fritters) and the savory, spicy beef roast",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Butter chicken & rice combo",
+    price: "$14.99",
+    description: "Traditional Keralan rice meal (‘Oonu’) with sides ‘Kootan’)",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Kerala meals",
+    price: "Veg $12.99 / Fish curry $14.99",
+    description: "Creamy butter chicken with aromatic ghee rice",
+  },
+];
+
+var curryMenuCambridge = [
+  {
+    imageSrc: "img/menu/Alleppey_Chicken_Curry.jpeg",
+    title: "Alleppey Chicken Curry",
+    price: "$15.99",
+    description: "Chicken, in coconut milk gravy, warm with spices",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Mutton Curry",
+    price: "$15.99",
+    description:
+      "Mutton, in Chef’s special spice blend, in an onion gravy, famously great with parotta",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Kozhi Varutharacha Curry",
+    price: "$12.99",
+    description: "Chicken in a roasted coconut masala",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Butter Chicken",
+    price: "$12.99",
+    description: "Chicken cubes in creamy tomato gravy",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Chicken Mappas",
+    price: "$12.99",
+    description: "Tender chicken cooked in a rich, creamy sauce",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Naadan Beef Curry",
+    price: "$13.99",
+    description:
+      "Beef, in Chef’s special spice blend, in an onion gravy, famously great with parotta",
+  },
+  {
+    imageSrc: "img/menu/Beef_Ularthiyathu.jpeg",
+    title: "Beef Coconut Fry",
+    price: "$15.99",
+    description:
+      "Beef chunks, seasoned with Keralan spice, and sauteed to perfection",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Beef Dry Fry (BDF)",
+    price: "$15.99",
+    description: "Beef strips, seasoned with Keralan spice, and pan fried",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Fish Mango Curry",
+    price: "$13.99",
+    description:
+      "Fish curry in simmered coconut paste finished with sour raw mangos",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Kottayam Fish Curry",
+    price: "$13.99",
+    description:
+      "(King Fish) Traditional Keralan spicy curry with sour kokum, finished with coconut milk",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Natholi(Anchovy) Fry",
+    price: "$14.99",
+    description: "Crispy fried anchovies in an aromatic batter",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Fish Tawa Fry",
+    price: "$5.99",
+    description: "King fish in a spicy Keralan masala, pan fried",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Pompano Tawa Fry",
+    price: "$18.99",
+    description: "Pompano in a spicy Keralan masala, pan fried",
+  },
+];
+
+var snacksCambridge = [
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Pazham Pozhi",
+    price: "$2.99",
+    description: "Ripe plantains in a sweet batter",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Sugiyan",
+    price: "$2.99",
+    description:
+      "Keralan snack made with green gram (moong dal) and jaggery, with a hint of cardamom",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Egg Puffs",
+    price: "$2.99",
+    description:
+      "Crispy, flaky puff pastry filled with a savory mixture of hard-boiled eggs and spiced onions",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Masala Bonda",
+    price: "$12.99",
+    description:
+      "Batter fried mixture of spicy mixture of potatoes, onions, and chilies",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Veg Cutlet",
+    price: "$2.49",
+    description: "A patty of spiced potatoes, packs a punch!",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Ulli (Onion) Vada",
+    price: "$2.49",
+    description: "Golden fried mixture of onions, with mild spices",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Beef Cutlet",
+    price: "$2.99",
+    description: "A patty of spiced potatoes and shredded beef",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Onion Pakoda (5)",
+    price: "$2.49",
+    description: "Golden fried mixture of onions, in Lentil flour",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Parippu Vada",
+    price: "$2.49",
+    description: "Crispy fried lentil fritters, made from Toor dal",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Chicken / Beef Samosa (2 pcs)",
+    price: "$2.99",
+    description: "Golden fried dough triangles with a spiced filling",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Uzhunnu (Medhu) Vada",
+    price: "$2.49",
+    description:
+      "Urad dal (black lentils) fritters with, onions, chilies, and spices",
+  },
+  {
+    imageSrc: "img/menu/no_image.jpeg",
+    title: "Unnakaya 2 Pcs",
+    price: "$2.99",
+    description: "Ripe Plantain Mash with a Coconut Ghee filling",
+  },
+];
+
 function sendEmail(event) {
   event.preventDefault();
   var customerName = document.getElementById("customerName").value;
@@ -282,11 +540,18 @@ function generateFoodMenu(container, foodItems) {
   }
 }
 
-// Call the function to generate HTML
-generateFoodMenu("popularMenuDiv", popularFoodMenu);
-generateFoodMenu("specialMenuDiv", specialFoodMenu);
-generateFoodMenu("lovelyMenuDiv", lovelyFoodMenu);
-
+function loadProperties(location) {
+  if (location === "waterloo") {
+    // Call the function to generate HTML
+    generateFoodMenu("popularMenuDiv", popularFoodMenu);
+    generateFoodMenu("specialMenuDiv", specialFoodMenu);
+    generateFoodMenu("lovelyMenuDiv", lovelyFoodMenu);
+  } else if (location === "cambridge") {
+    generateFoodMenu("specialMenuDiv", specialFoodMenuCambridge);
+    generateFoodMenu("curryMenuDiv", curryMenuCambridge);
+    generateFoodMenu("snacksMenuDiv", snacksCambridge);
+  }
+}
 //Testimonial Change - Start
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -706,17 +971,31 @@ function closePopup() {
   document.getElementById("deliveryPopup").style.display = "none";
 }
 
-function openOnlineDelivery(partner) {
+function openOnlineDelivery(partner, location) {
   if (partner === "uber") {
-    window.open(
-      "https://www.ubereats.com/ca/store/the-grand-malabar-indian-cuisine/KkngsvkSWTOLQuBi0o8LCA?diningMode=DELIVERY",
-      "_blank"
-    );
+    if (location === "waterloo") {
+      window.open(
+        "https://www.ubereats.com/ca/store/the-grand-malabar-indian-cuisine/KkngsvkSWTOLQuBi0o8LCA?diningMode=DELIVERY",
+        "_blank"
+      );
+    } else if (location === "cambridge") {
+      window.open(
+        "https://www.ubereats.com/ca/store/the-grand-malabar-express/MJXBAaJSXH-xt_QBYfeRuw",
+        "_blank"
+      );
+    }
   } else if (partner === "dash") {
-    window.open(
-      "https://www.doordash.com/store/the-grand-malabar-indian-cuisine-waterloo-24701025/",
-      "_blank"
-    );
+    if (location === "waterloo") {
+      window.open(
+        "https://www.doordash.com/store/the-grand-malabar-indian-cuisine-waterloo-24701025/",
+        "_blank"
+      );
+    } else if (location === "cambridge") {
+      window.open(
+        "https://www.doordash.com/store/the-grand-malabar-indian-cuisine-cambridge-33373671/58721346/",
+        "_blank"
+      );
+    }
   } else if (partner === "skip") {
     window.open(
       "https://www.skipthedishes.com/the-grand-malabar-indian-cuisine",

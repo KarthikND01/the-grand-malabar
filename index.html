@@ -3,18 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/img/logo/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/img/logo/favicon_io/site.webmanifest">
-    <link rel="mask-icon" href="/img/logo/favicon_io/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/img/logo/favicon_io/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/img/logo/favicon_io/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff"> -->
     <link rel="icon" href="https://thegrandmalabar.com/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="https://thegrandmalabar.com/favicon.ico" type="image/x-icon" />
-    <title>The Grand Malabar Indian Cuisine | Waterloo ON | Canada</title>
+    <title>The Grand Malabar Indian Cuisine | Cambridge | Waterloo | Canada</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="The Grand Malabar, our take on delicious food from the Indian subcontinent. Nestled at the heart of our culinary journey is a deep-rooted connection with the vibrant heritage of South India, where every dish tells a story of cultural richness and culinary excellence. We invite you on a culinary adventure that showcases the unique blend of spices, aromatic herbs, and fresh ingredients that define the Malabar region." name="description">
 
@@ -37,9 +28,104 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.min.css?v=3.0" rel="stylesheet">
+
+    <style>
+        /* Full-screen black transparent overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.858); /* Transparent black */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+            z-index: 1; /* Ensure it appears on top of other elements */
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+            z-index: 2;
+        }
+
+        .header {
+            font-size: 34px; 
+            padding-top: 35px;
+        }
+
+        /* Default button styling (for larger screens) */
+        .cartoon-button {
+            background: black; /* Button background color */
+            padding: 15px 40px;
+            font-size: 24px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            border: 1px solid #FEA116; /* Broader border with new color */
+            border-radius: 15px;
+            color: white; /* Text color */
+            box-shadow: 5px 5px 0px black;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out; /* Added a slightly slower transition for smoother effect */
+            z-index: 2;
+        }
+
+        /* Hover effect */
+        .cartoon-button:hover {
+            background: white; /* Button background color on hover */
+            color: black; /* Text color on hover */
+            box-shadow: 3px 3px 0px black;
+            transform: translate(2px, 2px);
+            border: 6px solid #FEA116; /* Keep the same border color on hover */
+            z-index: 2;
+        }
+
+        /* Mobile screen size - resize button for small screens */
+        @media (max-width: 768px) {
+            .cartoon-button {
+                padding: 12px 30px; /* Smaller padding */
+                font-size: 18px; /* Smaller font size */
+                border: 1px solid #FEA116; /* Adjust border size for smaller screens */
+            }
+        }
+
+        /* Large screens - resize button for bigger screens */
+        @media (min-width: 1200px) {
+            .cartoon-button {
+                padding: 20px 50px; /* Larger padding */
+                font-size: 28px; /* Larger font size */
+                border: 2px solid #FEA116; /* Bigger border size for large screens */
+            }
+        }
+
+        .logo-mainpage {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px; /* Set the width of your logo */
+            height: 300px; /* Set the height of your logo */
+            z-index: 2
+        }
+    </style>
 </head>
 
 <body class="bg-white">
+        <!-- Full-screen overlay - STRAT-->
+        <div class="overlay">
+            <img class="logo-mainpage" src="img/logo/TGM-Logo.png" alt="Logo">
+            <div class="header ff-secondary text-start text-primary fw-normal">Choose your location!</div>
+            <div class="button-container">
+                <button class="cartoon-button" onclick="window.location.href='waterloo.html'">Waterloo</button>
+                <button class="cartoon-button" onclick="window.location.href='cambridge.html'">Cambridge</button>
+            </div>
+        </div>
+        <!-- Full-screen overlay - End-->
+
         <div class="container-fluid bg-white p-0" id="home">
             <!-- Spinner Start -->
             <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -73,23 +159,11 @@
                         <img src="img/menu/Shrimp_lazeez.jpeg">
                     </div>
                 </div>
-                <div class="overlay"></div>
-                <img class="logo" src="img/logo/TGM-Logo.png" alt="Logo">
     
                 <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5 px-lg-5 py-0 py-sm-0 py-lg-0" id="navBarId">
                     <button class="navbar-toggler p-2 m-2 mt-3" type="button" onclick="changeIconBGColor()" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto py-0 pe-4">
-                            <a id="homeNav" onclick="setActive('homeNav')" href="#home" class="nav-item nav-link">Home</a>
-                            <a id="aboutNav" onclick="setActive('aboutNav')" href="#about" class="nav-item nav-link">About</a>
-                            <a id="orderNav" onclick="setActive('orderNav')" href="#orderOnline" class="nav-item nav-link">Order Online</a>
-                            <a id="menuNav" onclick="setActive('menuNav')" href="#menu" class="nav-item nav-link">Menu</a>
-                            <a id="contactNav"onclick="setActive('contactNav')" href="#contact" class="nav-item nav-link">Contact</a>
-                            <!-- <a id="newsDiv" onclick="openNewsLink()" href="#" class="nav-item nav-link">News</a> -->
-                        </div>
-                    </div>
                 </nav>
                 <!-- Wave Start-->
                 <div class="wave-header">
@@ -161,238 +235,6 @@
             </div>
         </div>
         <!-- About End -->
-
-        <div class="container-fluid py-2 container-order-online" id="orderOnline">
-            <div class="container">
-                <div class="text-center">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Order Online</h5>
-                    <h3 class="mb-1">Online Delivery Partners</h3>
-                    <div class="container">
-                        <div class="logo-container">
-                            <img class="uber-logo" onclick="openOnlineDelivery('uber')" src="img/logo/Uber-Eats-logo.png">
-                            <img class="dash-logo" onclick="openOnlineDelivery('dash')" src="img/logo/DoorDash-logo.png">
-                            <img class="skip-logo" onclick="openOnlineDelivery('skip')" src="img/logo/skip.png">
-                        </div>
-                    </div>
-                    <div>
-                        <a class="btn btn-dark" style="cursor: default;">Reservations / Catering / Party Orders</a>
-                        <h6>Contact us on <i class="fa fa-phone-alt text-primary m-1"></i> <span onclick="window.location.href = 'tel:+15192659598';" style="cursor: pointer;">+1-519-265-9598</span>
-                            <br><i class="fab fa-whatsapp m-1" style="font-size:20px;color: green;"></i> <a href="https://wa.me/15197222565" style="color: #0F172B;">+1-519-722-2565</a>
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="second-image-container" id="order-online-id">
-            <div class="second-overlay"></div>
-            <!-- Add text on top -->
-             <div class="second-div-text col-10">
-                    <h1 class="text-white animated slideInLeft">Explore the Flavors of Malabar!</h1>
-                    <p class="text-white animated slideInLeft mb-4 pb-1">Savor the exquisite tastes of Malabar cuisine at our restaurant, where every bite takes you on a journey to God's Own Country!</p>
-                    <a onclick="openOnlineOrderLink()" class="btn btn-primary animated slideInLeft">Order Pick Up</a>
-            </div>
-        </div>
-
-        <!-- Menu Start -->
-        <div class="container-fluid py-5" id="menu">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <h1 class="mb-1">Our Culinary Selections</h1>
-                    <a onclick="openCompleteMenuOptions()" class="mb-3 btn btn-primary" style="text-transform: none;">View Full Menu Options</a>
-                </div>
-                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-fire fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Popular</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Special</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <i class="fa fa-heart fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Lovely</h6>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="imagePopup">
-                            <div id="imageContainer">
-                                <span class="close-button" onclick="closeImagePopup()">&times;</span>
-                                <img id="popupImage" src="" alt="Popup Image">
-                            </div>
-                          </div>
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="row" id="popularMenuDiv"></div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="row" id="specialMenuDiv"></div>
-                            </div>
-                        </div>
-                        <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="row" id="lovelyMenuDiv"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Menu End -->
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="text-center">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-                    <h1 class="mb-5">Our Customers Say!!!</h1>
-                </div>
-                <div id="testimonialDivContainer" class="container"></div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-
-        <!--News Div-->
-        <div class="container-fluid mt-3 mb-2 wow fadeInUp news-div" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="text-center">
-                    <h5>As Seen On</h5>
-                    <div class="container mt-3">
-                    <img class="wgr-logo" src="img/logo/waterlooregion-logo.png" onclick="openNewsLink()" alt="Logo">
-                </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Contact Start -->
-        <div class="container-fluid py-5" id="contact">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
-                    <h1 class="mb-5">Tell Us What You Think!</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form onsubmit="sendEmail(event); reset();">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="customerName" maxlength="50" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="customerEmail" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="emailSubject" maxlength="80" placeholder="Subject">
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" maxlength="1000" id="emailBody" style="height: 150px"></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.283117407272!2d-80.54844322402835!3d43.454686171112286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf751ebfddfc9%3A0xf1704b16cdf57672!2sThe%20Grand%20Malabar%20Indian%20Cuisine!5e0!3m2!1sen!2sca!4v1683850309496!5m2!1sen!2sca"
-                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-        <!-- Footer Start -->
-        <div class="footer text-light footer pt-3 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="footer-overlay"></div>
-            <div class="wave-footer">
-                <svg class="waves-footer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-                </g>
-                </svg>
-            </div>
-            <div class="container py-3 footer-text">
-                <div class="row g-5">
-                    <div class="col" style="z-index: 2 !important;">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" style="z-index: 2 !important; ">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>347 Erb St. W #4, Waterloo, ON N2L 1W4</p>
-                        <p class="mb-2" ></i><a href="tel:+15192659598" style="color: #F1F8FF;"><i class="fa fa-phone-alt me-3"></i>+1-519-265-9598</a></p>
-                        <p class="mb-2" ></i><a href="https://wa.me/15197222565" style="color: #F1F8FF;"><i class="fab fa-whatsapp me-3" style="font-size:20px"></i>+1-519-722-2565</a></p>
-                        <div class="container m-0 p-0">
-                            <img class="halal_logo" style="position: relative;width: 70px;height: 70px;" src="img/logo/halal_logo.png">
-                        </div>
-                    </div>
-                    <div class="col" style="z-index: 2 !important;">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Follow us</h4>
-                        <div class="list-container">
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/thegrandmalabar/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100088486575255" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                    <div class="col" style="z-index: 2 !important;">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h6 class="text-light fw-normal">MON : <i class="text-grand-malabar-color" style="font-size: 12px;">Closed</i></h6>
-                        <h6 class="text-light fw-normal">TUE - WED - THU : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 3:00 PM, 4:30 - 10:30 PM</i></h6>
-                        <h6 class="text-light fw-normal">FRI : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 3:00 PM, 4:30 - 11:00 PM</i></h6>
-                        <h6 class="text-light fw-normal">SAT : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 11:00 PM</i></h6>
-                        <h6 class="text-light fw-normal">SUN : <i class="text-grand-malabar-color" style="font-size: 12px;">12:30 - 10:30 PM</i></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright p-0">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-1 mb-md-0" style="z-index: 2 !important; color: #F1F8FF !important;">
-                        &copy; <a>TheGrandMalabarIndianCuisine</a>, All Rights Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-         <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
